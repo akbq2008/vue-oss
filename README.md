@@ -19,7 +19,7 @@ yarn run upload 或者npm run upload
 ```
 
 # 参数
-参数名 | header 2
+参数名 | 说明
 ---|---
 targetDir | 指定上传的目录名称（默认为/）
 region | oss的region
