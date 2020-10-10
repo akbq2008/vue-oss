@@ -27,3 +27,5 @@ accessKeyId | oss的accessKeyId
 accessKeySecret | oss的accessKeySecret
 bucket | oss的bucket
 isNuxt | 是否是nuxt编译后的包
+isCustom | 是否是自定义路径
+customPath | 自定义路径名称

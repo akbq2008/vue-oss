@@ -1,15 +1,29 @@
+/*
+ * @Author: wang_yechao
+ * @Date: 2020-10-10 09:58:35
+ * @LastEditors: wang_yechao
+ * @LastEditTime: 2020-10-10 14:59:13
+ * @Description: 
+ */
 const OSS = require("ali-oss");
 const fs = require("fs");
 const path = require("path")
-var hasConfigured = hasConfiguredContent;
-var targetDir = targetDirContent;
-var region = regionContent;
-var accessKeyId = accessKeyIdContent;
-var accessKeySecret = accessKeySecretContent;
-var bucket = bucketContent;
-var isNuxt = isNuxtContent;
-buildPath = "/dist"
-isNuxt ? buildPath = '/.nuxt/dist/client' : buildPath = "/dist";
+const config = require(path.resolve(path.resolve(), './vueOss.config.js'))
+const targetDir = config.targetDir;
+const region = config.region;
+const accessKeyId = config.accessKeyId;
+const accessKeySecret = config.accessKeySecret;
+const bucket = config.bucket;
+const isNuxt = config.isNuxt;
+const isCustom = config.isCustom
+const customPath = config.customPath
+let buildPath
+if (isCustom) {
+    buildPath = customPath
+} else {
+    buildPath = "/dist"
+    isNuxt ? buildPath = '/.nuxt/dist/client' : buildPath = "/dist";
+}
 const PUBLIC_PATH = path.resolve();
 const client = new OSS({
     region: region,
