@@ -2,7 +2,7 @@
  * @Author: wang_yechao
  * @Date: 2020-10-10 09:58:35
  * @LastEditors: wang_yechao
- * @LastEditTime: 2020-10-10 14:44:29
+ * @LastEditTime: 2020-10-10 17:16:33
  * @Description: 
  */
 require('shelljs/global');
@@ -99,7 +99,6 @@ function prompt() {
             })
         })
     })
-
 }
 
 function uploadCb() {

@@ -2,21 +2,22 @@
  * @Author: wang_yechao
  * @Date: 2020-10-10 09:58:35
  * @LastEditors: wang_yechao
- * @LastEditTime: 2020-10-10 14:59:13
+ * @LastEditTime: 2020-10-10 17:26:52
  * @Description: 
  */
 const OSS = require("ali-oss");
 const fs = require("fs");
 const path = require("path")
 const config = require(path.resolve(path.resolve(), './vueOss.config.js'))
-const targetDir = config.targetDir;
+const targetDir = config.targetDir; // 上传到oss的目录
 const region = config.region;
 const accessKeyId = config.accessKeyId;
 const accessKeySecret = config.accessKeySecret;
 const bucket = config.bucket;
-const isNuxt = config.isNuxt;
-const isCustom = config.isCustom
-const customPath = config.customPath
+const isNuxt = config.isNuxt; // 是否是nuxt打包文件
+const isCustom = config.isCustom // 是否是自定义路径
+const customPath = config.customPath // 自定义路径名称
+const cover = config.cover || false // 是否删除远程oss上指定目录原有文件，否则已增量形式添加
 let buildPath
 if (isCustom) {
     buildPath = customPath
@@ -94,7 +95,9 @@ async function putOSS(src, dist) {
  */
 async function upFile(dirName) {
     try {
-        await deleteDir(dirName);
+        if (cover) {
+            await deleteDir(dirName);
+        }
         await addFileToOSSSync(PUBLIC_PATH + buildPath, dirName);
         console.log(dirName + "上传oss成功");
     } catch (err) {
