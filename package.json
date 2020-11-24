@@ -20,6 +20,9 @@
   "license": "ISC",
   "repository": {
     "type": "git",
-    "url": "https://github.com/akbq2008/vue-oss.git"
+    "url": "git://github.com/akbq2008/vue-oss.git"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
   }
 }
