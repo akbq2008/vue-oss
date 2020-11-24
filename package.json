@@ -1,6 +1,6 @@
 {
-  "name": "@akbq2008/vue-oss",
-  "version": "1.0.5",
+  "name": "vue-oss",
+  "version": "1.0.6",
   "description": "vue-oss主要支持vue和nuxt编译打包后的静态文件上传到阿里云oss上",
   "main": "bin/index.js",
   "scripts": {
@@ -20,7 +20,7 @@
   "license": "ISC",
   "repository": {
     "type": "git",
-    "url": "https://github.com/akbq2008/vue-oss"
+    "url": "git://github.com/akbq2008/vue-oss.git"
   },
   "publishConfig": {
     "registry": "https://npm.pkg.github.com/akbq2008"
