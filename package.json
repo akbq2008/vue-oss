@@ -21,8 +21,5 @@
   "repository": {
     "type": "git",
     "url": "git://github.com/akbq2008/vue-oss.git"
-  },
-  "publishConfig": {
-    "registry": "https://npm.pkg.github.com/akbq2008"
   }
 }
