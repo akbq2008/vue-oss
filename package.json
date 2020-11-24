@@ -1,6 +1,6 @@
 {
-  "name": "@akbq2008/vue-oss",
-  "version": "1.0.6",
+  "name": "vue-oss",
+  "version": "1.0.5",
   "description": "vue-oss主要支持vue和nuxt编译打包后的静态文件上传到阿里云oss上",
   "main": "bin/index.js",
   "scripts": {
